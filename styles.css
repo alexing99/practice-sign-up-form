@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     padding: 0;
@@ -20,7 +21,7 @@ body {
     width: 50vw;
     flex: 1;
     min-width: 900px;
-    min-height: 800px;
+    min-height: 781px;
 }
 
 .img2 {
@@ -69,7 +70,7 @@ a {
     left: 44vw;
     background-color: rgba(242, 245, 245, 0.887);
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - 44vw);
    
 }
 
@@ -86,8 +87,8 @@ button {
 
 .acct-q {
     margin: 20px;
-    position: absolute;
-
+    margin-top: 70px;
+    
 }
 
 .log-in {
@@ -98,7 +99,8 @@ button {
     font-weight: 600;
     font-size: 1.4em;
     margin: 20px;
-    margin-top: 150px;
+    margin-top: 110px;
+    margin-bottom: 39px;
 }
 
 form {
@@ -127,16 +129,21 @@ input:focus {
 }
 
 input {
-    padding: 5px 50px;
+    padding: 5px 10px;
     margin-right: 40px;
     margin-bottom: 20px;
     margin-left: 10px;
     flex: 1;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid black;
     
 }
 label {
-    font-weight: bold;
+    font-size: .7em;
     padding-left: 12px;
+    padding-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 input[type=password] {
     border: 1px solid rgb(201, 3, 3);
@@ -147,6 +154,14 @@ input, label {
     display: block;
 }
 
+#confirmPassword-feedback {
+    color: red;
+    padding-left: 12px;
+    margin-top: -50px;
+}
 
+#confirm_user_pwd {
+    margin-bottom: 0px;
+}
 
 
