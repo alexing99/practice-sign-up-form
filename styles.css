@@ -145,10 +145,10 @@ label {
     padding-bottom: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-input[type=password] {
+/* input[type=password] {
     border: 1px solid rgb(201, 3, 3);
     border-radius: 4px;
-}
+} */
 
 input, label {
     display: block;
@@ -160,7 +160,7 @@ input, label {
     margin-top: -50px;
 }
 
-#confirm_user_pwd {
+#confirmPassword {
     margin-bottom: 0px;
 }
 

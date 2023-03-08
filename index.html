@@ -7,12 +7,7 @@
     <title>Practice Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-    
 
-
-
-</script>
 <body>
     <div class="leftside">
         <img class=img1 src="images/elephants.png">
@@ -24,7 +19,7 @@
     </div> 
     <div class="rightside">
         <p class="caption">This is not a real online service! <br>But if it were, you would need it bad. <br><br>Sign up now to get started!</p>
-        <form action="" method="post">
+        <form id="myForm" method="post">
             <fieldset>
                 <legend>Let's Do It!</legend>
                 <div class="leftside-form">
@@ -34,8 +29,8 @@
                     <label for="user_email">EMAIL</label>
                     <input type="email" id="user_email" name="user_email" required></input>
     
-                    <label for="user_pwd">PASSWORD</label>
-                    <input type="password" id="user_pwd" name="user_pwd" required></input>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required></input>
         
                     
                 </div>
@@ -46,13 +41,60 @@
                     <label for="user_phone">PHONE NUMBER</label>
                     <input type="tel" id="user_phone" name="user_phone" required></input>
                     
-                    <label for="confirm_user_pwd">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_user_pwd" name="confirm_user_pwd" required></input>
-                    <small id="confirmPassword-feedback">yer</small>
+                    <label for="confirmPassword">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required></input>
+                    <small id="confirmPassword-feedback"></small>
                 </div>     
             </fieldset> 
             <button type="submit">Create Account</button>
         </form>
+        <script>
+            const form = document.getElementById('myForm');
+            const password = form.password; 
+            const confirmPassword = form.confirmPassword;
+            const feedback = document.getElementById('confirmPassword-feedback');
+            const passBorder = document.getElementById('password');
+            const conPassBorder = document.getElementById('confirmPassword');
+            let isPasswordMatch = false;
+
+            password.addEventListener("input", ()=> {
+                if  (password.value != confirmPassword.value) {
+                    feedback.innerHTML = "Password does not match";
+                    passBorder.style.borderColor = "red";
+                    conPassBorder.style.borderColor = "red";
+                    isPasswordMatch = false;
+                } else {
+                    feedback.innerHTML = "";
+                    passBorder.style.borderColor = "green";
+                    conPassBorder.style.borderColor = "green";
+                    isPasswordMatch = true;
+                }
+             })
+        
+            confirmPassword.addEventListener("input", ()=> {
+                if (password.value != confirmPassword.value) {
+                    feedback.innerHTML = "Password does not match";
+                    passBorder.style.borderColor = "red";
+                    conPassBorder.style.borderColor = "red";
+                    isPasswordMatch = false;
+                } else {
+                    feedback.innerHTML = "";
+                    passBorder.style.borderColor = "green";
+                    conPassBorder.style.borderColor = "green";
+                    isPasswordMatch = true;
+                }
+             })
+
+             form.onsubmit = function () {
+                if (isPasswordMatch) {
+                    alert("Form submitted. Great!")
+                    return true;
+                }
+                alert("Passwords do not match!")
+                return false;
+             };
+    
+        </script>
         <p class="acct-q">Already have an account? <a class="log-in">Log in</a></p>   
     </div>
         
