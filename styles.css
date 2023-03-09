@@ -4,11 +4,15 @@ body {
     padding: 0;
     margin: 0;
     flex-direction: row;
+    background-image:url("images/elephants.png");
+    
+  
+    
 }
 
 .leftside {
-    height: 100vh;
     width: 44vw;
+    /* height: ; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -17,11 +21,10 @@ body {
 }
 .img1 {
     position: absolute;
-    height: 100vh;
-    width: 50vw;
-    flex: 1;
-    min-width: 900px;
-    min-height: 781px;
+    height: 200vh;
+   
+   
+  
 }
 
 .img2 {
@@ -70,7 +73,8 @@ a {
     left: 44vw;
     background-color: rgba(242, 245, 245, 0.887);
     height: 100vh;
-    width: calc(100vw - 44vw);
+    /* width: 100vw; */
+   
    
 }
 
@@ -96,8 +100,9 @@ button {
 }
 
 .caption {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.4em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     margin-top: 110px;
     margin-bottom: 39px;
@@ -145,10 +150,10 @@ label {
     padding-bottom: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/* input[type=password] {
+input[type=password] {
     border: 1px solid rgb(201, 3, 3);
     border-radius: 4px;
-} */
+} 
 
 input, label {
     display: block;
